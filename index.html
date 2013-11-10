@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+		#playcontrols {
+			text-align: center;
+			margin-top: 20px;
+		}
+		#playcontrols #activityindicator, #playcontrols #stopbutton {
+			display: none;
+		}
+		
+		#textpositiondiv {
+			margin-top: 20px;
+		}
+		
+	
+	</style>
+	<script type="text/javascript" charset="utf-8" src="scripts/html5audio.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/html5audio1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/cordova-2.0.0.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.2.1.js"></script>
+
+  </head>
+  <body>
+  <div data-role="page" id="five" data-theme="e">	
+    <img src = "images/audio.png" alt = "live" width="100%" height="200px"/>
+	   <hr>
+	  <center><h4>First Fruit Giving, Part 1</h4></center>
+  	  <div id="playcontrols">
+		  <a href="#" id="playbutton" data-role="button" onClick="html5audio.play();return false;"> Play</a>
+		  <a href="#" id="activityindicator" data-role="button"onClick="html5audio.stop();return false;">Loading</a>
+		  <a href="#" id="stopbutton" data-role="button" onClick="html5audio.stop();return false;">Stop</a>
+	  </div>
+	  <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>
+	  <script type="text/javascript">
+		  playButton = document.getElementById('playbutton');
+		  stopButton = document.getElementById('stopbutton');
+		  activityIndicator = document.getElementById('activityindicator');
+		  textPosition = document.getElementById('textposition');
+	  </script>
+	  <hr>
+	
+	  </div>
+  </body>
+</html>
